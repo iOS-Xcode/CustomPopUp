@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Pop Up View Controller-->
+        <scene sceneID="td3-1J-VOF">
+            <objects>
+                <viewController storyboardIdentifier="CPVC" id="GY6-pC-WRD" customClass="CustomPopUpViewController" customModule="CustomPopUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g1m-fB-F5e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwg-6g-OA1" userLabel="bgBtn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="tappedDismissButton:" destination="GY6-pC-WRD" eventType="touchUpInside" id="myV-RD-tgs"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O4m-0G-PBS" userLabel="ContentView">
+                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busan" translatesAutoresizingMaskIntoConstraints="NO" id="1xC-xe-hHa">
+                                        <rect key="frame" x="65" y="20" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="9xS-s0-hEt"/>
+                                            <constraint firstAttribute="height" constant="120" id="TkD-Rk-Kdw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Busan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hm-wW-ERi">
+                                        <rect key="frame" x="38" y="148" width="174" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="f7g-ye-ezG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is Haeundae" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jw-gl-RzB">
+                                        <rect key="frame" x="59.5" y="184" width="131" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="MAT-B2-Gse"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAT-E6-O2u">
+                                        <rect key="frame" x="38" y="234" width="174" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="WXW-2r-HOP"/>
+                                        </constraints>
+                                        <state key="normal" title="Visit Busan">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedVisitButton:" destination="GY6-pC-WRD" eventType="touchUpInside" id="cMD-Pk-KPj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="BAT-E6-O2u" firstAttribute="trailing" secondItem="4Hm-wW-ERi" secondAttribute="trailing" id="6Hx-wW-pKq"/>
+                                    <constraint firstItem="4Hm-wW-ERi" firstAttribute="top" secondItem="1xC-xe-hHa" secondAttribute="bottom" constant="8" symbolic="YES" id="Bo8-jz-xiR"/>
+                                    <constraint firstItem="1xC-xe-hHa" firstAttribute="top" secondItem="O4m-0G-PBS" secondAttribute="top" constant="20" id="EGp-HP-bTS"/>
+                                    <constraint firstItem="0Jw-gl-RzB" firstAttribute="top" secondItem="4Hm-wW-ERi" secondAttribute="bottom" constant="12" id="ENs-4k-W1f"/>
+                                    <constraint firstAttribute="height" constant="300" id="JUX-TX-Xe2"/>
+                                    <constraint firstItem="1xC-xe-hHa" firstAttribute="centerX" secondItem="O4m-0G-PBS" secondAttribute="centerX" id="YHT-KM-w58"/>
+                                    <constraint firstItem="BAT-E6-O2u" firstAttribute="leading" secondItem="4Hm-wW-ERi" secondAttribute="leading" id="am1-FH-EvM"/>
+                                    <constraint firstItem="4Hm-wW-ERi" firstAttribute="centerX" secondItem="O4m-0G-PBS" secondAttribute="centerX" id="hX2-Mn-fco"/>
+                                    <constraint firstItem="0Jw-gl-RzB" firstAttribute="centerX" secondItem="O4m-0G-PBS" secondAttribute="centerX" id="q2o-lF-F7c"/>
+                                    <constraint firstAttribute="bottom" secondItem="BAT-E6-O2u" secondAttribute="bottom" constant="36" id="yA0-na-ucd"/>
+                                    <constraint firstAttribute="width" constant="250" id="zYg-tS-1hS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C4z-Ds-NhP"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="O4m-0G-PBS" firstAttribute="centerX" secondItem="g1m-fB-F5e" secondAttribute="centerX" id="9w1-y1-uTN"/>
+                            <constraint firstItem="Uwg-6g-OA1" firstAttribute="top" secondItem="C4z-Ds-NhP" secondAttribute="top" id="I0g-cU-HaN"/>
+                            <constraint firstItem="Uwg-6g-OA1" firstAttribute="trailing" secondItem="C4z-Ds-NhP" secondAttribute="trailing" id="X40-JI-YGv"/>
+                            <constraint firstItem="Uwg-6g-OA1" firstAttribute="leading" secondItem="C4z-Ds-NhP" secondAttribute="leading" id="lr8-BE-US3"/>
+                            <constraint firstItem="Uwg-6g-OA1" firstAttribute="bottom" secondItem="C4z-Ds-NhP" secondAttribute="bottom" id="oKv-Nj-jIO"/>
+                            <constraint firstItem="O4m-0G-PBS" firstAttribute="centerY" secondItem="g1m-fB-F5e" secondAttribute="centerY" id="qqh-NY-CG2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="O4m-0G-PBS" id="gjz-Gm-SRK"/>
+                        <outlet property="visitBtn" destination="BAT-E6-O2u" id="LfJ-2Q-syV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbZ-Ba-7M9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="247.82608695652175" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="busan" width="1373.5" height="2056.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
