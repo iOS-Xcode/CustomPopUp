@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PopupDelgate {
 
     @IBOutlet weak var webView: WKWebView!
     @IBAction func showPopUp(_ sender: UIButton) {
@@ -27,6 +27,8 @@ class ViewController: UIViewController {
             let myUrl = URL(string: "https://www.daum.net")
             self.webView.load(URLRequest(url: myUrl!))
         }
+        //Delegate
+        alertPopupVC.popUpDelgate = self
         
         self.present(alertPopupVC, animated: true, completion: nil)
     }
@@ -35,7 +37,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    //MARK: - PopUpDelegate Method
+    func onTappedViewMySite() {
+        print("ViewController - PopUpDelegate")
+        let myUrl = URL(string: "https://www.studyios.org")
+        self.webView.load(URLRequest(url: myUrl!))
+    }
 }
 

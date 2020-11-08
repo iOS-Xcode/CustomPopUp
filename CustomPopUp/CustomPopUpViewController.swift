@@ -10,9 +10,10 @@ import UIKit
 class CustomPopUpViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var visitBtn: UIButton!
+    @IBOutlet weak var viewMySiteBtn: UIButton!
     
     var visitButtonCompletionClosure: (() -> Void)?
-    
+    var popUpDelgate : PopupDelgate?
     @IBAction func tappedDismissButton(_ sender: UIButton) {
         print("tappedDismissButton")
         self.dismiss(animated: true, completion: nil)
@@ -25,10 +26,16 @@ class CustomPopUpViewController: UIViewController {
         }
         print("tappedVisitButton")
     }
+    @IBAction func viewMySite(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        //delegate event run, ViewController is reciver. This method is sender.
+        popUpDelgate?.onTappedViewMySite()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.layer.cornerRadius = 30
         visitBtn.layer.cornerRadius = 10
+        viewMySiteBtn.layer.cornerRadius = 10
     }
     
 }
