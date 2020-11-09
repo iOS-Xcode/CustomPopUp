@@ -8,6 +8,8 @@
 import UIKit
 import WebKit
 
+let notificationName = "btnClickNotification"
+
 class ViewController: UIViewController, PopupDelgate {
 
     @IBOutlet weak var webView: WKWebView!
@@ -36,6 +38,9 @@ class ViewController: UIViewController, PopupDelgate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //Register noti recevier
+        NotificationCenter.default.addObserver(self, selector: #selector(loadWebView), name: NSNotification.Name(rawValue: notificationName), object: nil)
     }
     
     //MARK: - PopUpDelegate Method
@@ -43,6 +48,18 @@ class ViewController: UIViewController, PopupDelgate {
         print("ViewController - PopUpDelegate")
         let myUrl = URL(string: "https://www.studyios.org")
         self.webView.load(URLRequest(url: myUrl!))
+    }
+    
+    //MARK: - Noti Run
+    @objc fileprivate func loadWebView() {
+        print("loadWebView")
+        let myUrl = URL(string: "https://www.canada.ca/home.html")
+        self.webView.load(URLRequest(url: myUrl!))
+    }
+    
+    //Notification center release from memory
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 

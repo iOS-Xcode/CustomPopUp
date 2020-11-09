@@ -11,6 +11,7 @@ class CustomPopUpViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var visitBtn: UIButton!
     @IBOutlet weak var viewMySiteBtn: UIButton!
+    @IBOutlet weak var viewCanadaSite: UIButton!
     
     var visitButtonCompletionClosure: (() -> Void)?
     var popUpDelgate : PopupDelgate?
@@ -31,11 +32,17 @@ class CustomPopUpViewController: UIViewController {
         //delegate event run, ViewController is reciver. This method is sender.
         popUpDelgate?.onTappedViewMySite()
     }
+    @IBAction func viewCanadaSite(_ sender: UIButton) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: notificationName), object: nil)
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.layer.cornerRadius = 30
         visitBtn.layer.cornerRadius = 10
         viewMySiteBtn.layer.cornerRadius = 10
+        viewCanadaSite.layer.cornerRadius = 10
     }
     
 }

@@ -52,14 +52,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TxO-FH-YLL">
-                                        <rect key="frame" x="65" y="340" width="120" height="80"/>
+                                        <rect key="frame" x="50" y="290" width="150" height="130"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wkx-Bh-fPs">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.63529411759999999" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="SjO-Jc-MYG"/>
+                                                    <constraint firstAttribute="width" constant="150" id="wZS-wf-yNG"/>
+                                                </constraints>
+                                                <state key="normal" title="View Cannada Site">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="viewCanadaSite:" destination="GY6-pC-WRD" eventType="touchUpInside" id="VuO-rL-Mzs"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5K-69-Ik1">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
+                                                <rect key="frame" x="0.0" y="50" width="150" height="30"/>
                                                 <color key="backgroundColor" red="0.2666666667" green="0.59215686270000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Cv6-v2-vDm"/>
-                                                    <constraint firstAttribute="width" constant="120" id="ePr-tA-AYg"/>
+                                                    <constraint firstAttribute="width" constant="150" id="ePr-tA-AYg"/>
                                                 </constraints>
                                                 <state key="normal" title="View My Site">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,10 +83,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAT-E6-O2u">
-                                                <rect key="frame" x="0.0" y="50" width="120" height="30"/>
+                                                <rect key="frame" x="0.0" y="100" width="150" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.52156862749999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="120" id="RQ7-xB-4L1"/>
+                                                    <constraint firstAttribute="width" constant="150" id="RQ7-xB-4L1"/>
                                                     <constraint firstAttribute="height" constant="30" id="WXW-2r-HOP"/>
                                                 </constraints>
                                                 <state key="normal" title="Visit Busan">
@@ -113,6 +127,7 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="O4m-0G-PBS" id="gjz-Gm-SRK"/>
+                        <outlet property="viewCanadaSite" destination="Wkx-Bh-fPs" id="vOF-ea-a6E"/>
                         <outlet property="viewMySiteBtn" destination="o5K-69-Ik1" id="z4w-1p-0ZI"/>
                         <outlet property="visitBtn" destination="BAT-E6-O2u" id="LfJ-2Q-syV"/>
                     </connections>

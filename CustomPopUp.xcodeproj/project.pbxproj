@@ -40,6 +40,8 @@
 		B94A62DE2555F60300A4E8AA /* Popup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popup.storyboard; sourceTree = "<group>"; };
 		B94A62E1255603C800A4E8AA /* CustomPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpViewController.swift; sourceTree = "<group>"; };
 		B94A62E5255622FA00A4E8AA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B94C9EE02558F3CD00C68B5B /* screenshot7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot7.png; sourceTree = "<group>"; };
+		B94C9EE12558F3CD00C68B5B /* screenshot6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,8 @@
 				B941E050255712EA00DF1F2C /* screenshot3.png */,
 				B941E05B2557BA5D00DF1F2C /* screenshot4.png */,
 				B941E05C2557BA5D00DF1F2C /* screenshot5.png */,
+				B94C9EE12558F3CD00C68B5B /* screenshot6.png */,
+				B94C9EE02558F3CD00C68B5B /* screenshot7.png */,
 				B94A62CB2555F3F400A4E8AA /* SceneDelegate.swift */,
 				B94A62CD2555F3F400A4E8AA /* ViewController.swift */,
 				B94A62CF2555F3F400A4E8AA /* Main.storyboard */,
